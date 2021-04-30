@@ -5,11 +5,11 @@ Discord bot that uses the open brewery DB API
 
 - It can tell you what its connection latency is
 
-        Command: .ping
+        Command: !ping
 
 - It can take a postal code or city/ state input and return all of the breweries in that area using the Open Brewey DB API. This functionality is still in beta and needs major work.
 
-        Command: .brew POSTAL_CODE or CITY or STATE
+        Command: !brew POSTAL_CODE or CITY or STATE
 
 
 Open Brewery DB API: https://www.openbrewerydb.org/
