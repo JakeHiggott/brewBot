@@ -7,9 +7,9 @@ Discord bot that uses the open brewery DB API
 
         Command: .ping
 
-- It can take a postal code input and return all of the breweries in that area using the Open Brewey DB API. This functionality is still in beta and needs major work.
+- It can take a postal code or city/ state input and return all of the breweries in that area using the Open Brewey DB API. This functionality is still in beta and needs major work.
 
-        Command: .beer POSTAL_CODE
+        Command: .brew POSTAL_CODE or CITY or STATE
 
 
 Open Brewery DB API: https://www.openbrewerydb.org/
