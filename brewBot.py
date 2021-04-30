@@ -63,9 +63,38 @@ async def brew(ctx,*,userInput):
         )
         await ctx.send(embed=embed)
 
+@client.command()
+async def info(ctx,*,userInput):
+    title = ''
+    message = ''
+    i=0 
+    r = requests.get(f'https://api.openbrewerydb.org/breweries/search?query={userInput}')
+    if(len(r.json()) > 25):
+            title = f"***brewBot Found {len(r.json())} results for search request: {userInput}\nOnly showing the top 25 results***"
+            while (i < len(r.json()) and i <= 20):
+                message = message + f"**Brewery:** {r.json()[i]['name']}     (**ID: **{r.json()[i]['id']})\nStreet Adress: {r.json()[i]['street']}\n"
+                i = i+1
+    else:
+        if(len(r.json()) > 0 and len(r.json()) < 25):
+            title = f"***brewBot Found {len(r.json())} results for search request: {userInput}***"
+            while (i < len(r.json())):
+                message = message + f"**Brewery:** {r.json()[i]['name']}     (**ID: **{r.json()[i]['id']})\nStreet Adress: {r.json()[i]['street']}\n"
+                i = i+1           
+        else:
+            title = f"Sorry! I could not find anything. :(\nMake sure it's spelled correctly!"
+    embed = discord.Embed(
+    title = title,
+    description = message,
+    color = discord.Color.orange()
+    )
+    await ctx.send(embed=embed)
+       
+
+    
 
 
-client.run('Token here')    
+
+client.run('token here')    
 
 
 """

@@ -11,6 +11,10 @@ Discord bot that uses the open brewery DB API
 
         Command: !brew POSTAL_CODE or CITY or STATE
 
+- Added the info search. This command can search for breweries by thier names. If there are more then 25 results it will only show the top 25
+
+        Command !info NAME_OF_BREWERY
+
 
 Open Brewery DB API: https://www.openbrewerydb.org/
 
