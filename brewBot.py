@@ -88,36 +88,34 @@ async def info(ctx,*,userInput):
     color = discord.Color.orange()
     )
     await ctx.send(embed=embed)
-       
 
-    
-
-
-
-client.run('token here')    
-
-
-"""
 @client.command()
-async def displayembed(ctx):
-    description1 = "DESCRIPTION 1"
-    description2 = "DESCRIPTION 2"
-    desCat = description1 + description2
+async def introduce(ctx):
+    
     embed = discord.Embed(
-        title = 'Title',
-        description = desCat,
+        title = f'Hi I am Brew Bot!',
+        description = f'If you would like to know more about my different commands call the **!help** command or checkout my documentation!(https://github.com/JakeHiggott/brewBot) \n If you want to help build me let https://github.com/JakeHiggott know! I acess the Open Brewery DB API check them out! ',
         color = discord.Color.blue()
     )
    
-    embed.set_footer(text='This is a footer.')
-    #embed.set_image()
+    embed.set_footer(text='https://github.com/openbrewerydb')
+    embed.set_image(url = "https://raw.githubusercontent.com/openbrewerydb/openbrewerydb-gatsby/master/content/images/obdb-hacktoberfest-2020-banner.png")
     #embed.set_thumbnail()
     #embed.set_author()
     #embed.add_field(name = "ID", value = member.id, inline= True)
     await ctx.send(embed=embed)
 
 
-"""
+
+
+
+
+
+client.run('token')    
+
+
+
+
 
 
 
