@@ -3,6 +3,7 @@ from discord.ext import commands
 import random 
 import requests
 import pprint
+import mysql.connector
 
 
 client = commands.Bot(command_prefix = '!')
